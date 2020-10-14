@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Container, Col, Row } from "react-bootstrap";
-import Menu from "./components/organisms/navbar";
+// import Menu from "./components/organisms/navbar";
 
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Routes } from "./app/routes";
@@ -9,8 +9,8 @@ const App = () => {
   return (
     <ErrorBoundary>
       <Suspense fallback={"Loading..."}>
-        <Menu />
-        <Container className="">
+        {/* <Menu /> */}
+        <Container>
           <Row>
             <Col>
               <Routes />
