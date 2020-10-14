@@ -1,0 +1,22 @@
+# stages:
+#   - build
+
+# variables:
+#   BUCKET: ''
+#   AWS_DEFAULT_REGION: "eu-west-1"
+
+# image: registry.gitlab.com/evenergi/secdevops/build-tools/build-test-node:latest
+
+# build:
+#   stage: build
+#   script:
+#     - yarn install
+#     - INLINE_RUNTIME_CHUNK=false yarn run build
+#     - aws s3 sync ./build/ s3://${BUCKET} --delete
+#   artifacts:
+#     paths:
+#       - build
+#       - node_modules
+#     expire_in: 60 minutes
+#   only:
+#     - master
